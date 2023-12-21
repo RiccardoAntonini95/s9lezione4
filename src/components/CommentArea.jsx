@@ -26,7 +26,7 @@ class CommentArea extends React.Component{
     }
 
     getComments = () => {
-        fetch("https://striveschool-api.herokuapp.com/api/books/comments/{this.props.libroSingolo.asin}",{
+        fetch("https://striveschool-api.herokuapp.com/api/books/comments/"+this.props.libroSingolo.asin ,{
             headers: headerAuth
         })
         .then(response => {
