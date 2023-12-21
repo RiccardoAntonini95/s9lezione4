@@ -1,0 +1,1 @@
+/* [EXTRA] Crea un componente Loading. Questo apparirà nella pagina quando la richiesta è in fase di elaborazione, ma non ancora risolta. */
