@@ -15,7 +15,7 @@ Conterrà inoltre due sotto-componenti: CommentsList and AddComment. */
 import React from "react";
 import CommentsList from "./CommentsList";
 
-const headerAuth = {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NGUzZGI1MjViYjAwMThlZDA4MmMiLCJpYXQiOjE3MDMxNjk1OTgsImV4cCI6MTcwNDM3OTE5OH0.1BZTwgvVGULqLhp0H6JXMCwgajB0SobgiU3wAKksmSc", "Content-Type" : "application/json"}
+const headerAuth = {"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTg0NGUzZGI1MjViYjAwMThlZDA4MmMiLCJpYXQiOjE3MDMxNjk1OTgsImV4cCI6MTcwNDM3OTE5OH0.1BZTwgvVGULqLhp0H6JXMCwgajB0SobgiU3wAKksmSc"}
 
 class CommentArea extends React.Component{
     constructor(props){
@@ -26,7 +26,8 @@ class CommentArea extends React.Component{
     }
 
     getComments = () => {
-        fetch("https://striveschool-api.herokuapp.com/api/books/comments/"+this.props.libroSingolo.asin ,{
+        fetch("https://striveschool-api.herokuapp.com/api/comments/"+this.props.asin ,{
+            method: "GET",
             headers: headerAuth
         })
         .then(response => {

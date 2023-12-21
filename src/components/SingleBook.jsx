@@ -42,7 +42,8 @@ class SingleBook extends React.Component {
                     </Card.Text>
                 </Card.Body>
             </Card>
-            <CommentArea /* style={{display: this.state.isSelected? "block" : "none"}} *//>
+            {this.state.isSelected && <CommentArea asin={this.props.libroSingolo.asin} />}
+           {/*  <CommentArea asin={this.props.libroSingolo.asin} style={{display: this.state.isSelected? "block" : "none"}}/> */}
            {/*  qua dentro va short-circuit operator, quando è true isSelected mostra commentArea insieme a boxshadow   */}
            {/* qua commentarea fa fetch usando this.props.libroSingolo.asin nell'url come fosse elementId dell'API */}
         </Col>
